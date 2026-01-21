@@ -15,3 +15,17 @@ VMs
 -TheHive + Elastic.
 -Win Server.
 -Windows 10.
+
+
+2. **Definir VLANs**
+Vamos criar 3 redes isoladas, NAT(sem DHCP, o pfSense vai dar IPs)
+-VLAN10-10.0.10.0/24
+-VLAN20-10.0.20.0/24
+-VLAN30-10.0.30.0/24
+
+3. **Criação do pfSense**
+Adicionamos 4 placas de redes virtuais
+-NIC1: Bridge - Acesso á Internet externa
+-NIC2: VLAN10_SOC
+-NIC3: VLAN20_CORP
+-NIC4: VLAN30_DMZ
